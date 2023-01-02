@@ -1,7 +1,13 @@
 import React from "react";
+import { Navbar, Hero } from "./components";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <Navbar />
+      <Hero />
+    </>
+  );
 }
 
 export default App;
