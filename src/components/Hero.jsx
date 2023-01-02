@@ -4,9 +4,9 @@ import { icons } from "../libs/icons";
 
 const Hero = () => {
   return (
-    <main className="">
-      <div className="">
-        <img src={HeroImg} alt="img" className="w-full h-full" />
+    <main>
+      <div className="w-full h-[320px] max-w-[600px] mx-auto">
+        <img src={HeroImg} alt="img" className="w-full h-full object-cover" />
       </div>
 
       <article className="mt-5 p-4">
@@ -16,7 +16,7 @@ const Hero = () => {
           create team rituals, and watch productivity soar.
         </p>
         <div className="flex justify-center mt-6">
-          <button className="w-1/3 bg-almost-black text-almost-white py-3 px-3 rounded-xl hover:bg-opacity-95 duration-150">
+          <button className="w-1/3 border border-almost-black bg-almost-black text-almost-white py-3 px-3 rounded-xl hover:bg-almost-white hover:text-almost-black duration-150">
             Learn more
           </button>
         </div>
