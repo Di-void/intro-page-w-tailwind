@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../assets/svgs/logo.svg";
 import { TbMenu2 } from "react-icons/tb";
 import { GrClose } from "react-icons/gr";
+import { featureIcons } from "../libs/featureIcons";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const optionsForDropDown = {
@@ -86,7 +87,7 @@ const Navbar = () => {
       <div
         className={`${
           navStates.menuState.isOpen ? "visible" : "invisible"
-        } md:hidden bg-almost-black bg-opacity-80 fixed top-0 left-0 w-full h-screen duration-150`}
+        } md:hidden bg-almost-black bg-opacity-80 fixed top-0 left-0 w-full h-screen duration-150 z-10`}
       >
         {/* menu-start */}
         <div
@@ -126,18 +127,17 @@ const Navbar = () => {
                   navStates.menuState.features ? "" : "hidden"
                 }`}
               >
-                <li className="hover:outline-dotted cursor-pointer">
-                  Todo List
-                </li>
-                <li className="hover:outline-dotted cursor-pointer">
-                  Calendar
-                </li>
-                <li className="hover:outline-dotted cursor-pointer">
-                  Reminders
-                </li>
-                <li className="hover:outline-dotted cursor-pointer">
-                  Planning
-                </li>
+                {featureIcons.map((item) => {
+                  return (
+                    <li
+                      key={item.id}
+                      className="hover:outline-dotted capitalize flex items-center cursor-pointer"
+                    >
+                      <span className="mr-2">{item.icon}</span>
+                      {item.text}
+                    </li>
+                  );
+                })}
               </ul>
             </li>
 
