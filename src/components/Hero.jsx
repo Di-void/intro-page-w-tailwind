@@ -27,7 +27,7 @@ const Hero = () => {
                 <img
                   src={icon.path}
                   alt="/"
-                  className="z-0 w-full h-full object-scale-down scale-75 md:scale-100"
+                  className="z-0 w-full h-full object-scale-down scale-75 md:scale-110"
                 />
               </div>
             );
