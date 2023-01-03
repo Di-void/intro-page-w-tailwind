@@ -59,10 +59,10 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between p-5">
-      {/* logo */}
-      <div className="flex md:w-[80%] max-w-[700px]">
-        <img src={Logo} alt="/" />
-        {/* desktop-links */}
+      {/* LOGO AND LINKS SECTION */}
+      <div className="flex md:w-[80%] max-w-[700px] ">
+        <img src={Logo} alt="/" className="hover:cursor-pointer" />
+        {/* DESKTOP MENU LINKS */}
         <ul className="hidden md:flex justify-between ml-20 w-[80%]">
           <li className="flex items-center text-medium-gray text-left">
             Features{" "}
@@ -79,8 +79,9 @@ const Navbar = () => {
           <li className="text-medium-gray text-left">Careers</li>
           <li className="text-medium-gray text-left">About</li>
         </ul>
-        {/* desktop links */}
+        {/* END DESKTOP MENU LINKS */}
       </div>
+      {/* END LOGO AND LINKS SECTION */}
 
       {/* mobile-menu */}
       {/* overlay */}

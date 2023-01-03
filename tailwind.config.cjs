@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {},
+    colors: {
+      red: "red",
+      blue: "blue",
+      white: "white",
+    },
     fontFamily: {
       epilogue: ["Epilogue", "sans-serif"],
     },
