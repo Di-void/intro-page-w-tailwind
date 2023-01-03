@@ -83,18 +83,18 @@ const Navbar = () => {
       </div>
       {/* END LOGO AND LINKS SECTION */}
 
-      {/* mobile-menu */}
-      {/* overlay */}
+      {/* MOBILE MENU */}
+      {/* OVERLAY */}
       <div
         className={`${
           navStates.menuState.isOpen ? "visible" : "invisible"
         } md:hidden bg-almost-black bg-opacity-80 fixed top-0 left-0 w-full h-screen duration-150 z-10`}
       >
-        {/* menu-start */}
+        {/* MENU START */}
         <div
           className={`${
             navStates.menuState.isOpen ? "right-0" : "right-[-100%]"
-          } bg-almost-white w-[65%] absolute h-[100%] p-5 duration-75`}
+          } bg-almost-white w-[65%] absolute h-[100%] p-5 duration-75 overflow-auto`}
         >
           {/* close MENU button */}
           <button
@@ -192,7 +192,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      {/* mobile-menu-end*/}
+      {/* END MOBILE MENU */}
 
       {/* buttons */}
 
