@@ -20,8 +20,56 @@ const Navbar = () => {
       company: false,
     },
   });
+  const [isHovering, setIsHovering] = useState({
+    features: false,
+    company: false,
+  });
 
   // FUNCTIONS
+
+  const handleMouseEnter = (e) => {
+    const id = e.currentTarget.dataset.id;
+    if (id === optionsForDropDown.FEAT) {
+      setIsHovering((oldState) => {
+        let newState = {
+          ...oldState,
+          features: true,
+        };
+        return newState;
+      });
+    }
+    if (id === optionsForDropDown.COMPANY) {
+      setIsHovering((oldState) => {
+        let newState = {
+          ...oldState,
+          company: true,
+        };
+        return newState;
+      });
+    }
+  };
+
+  const handleMouseLeave = (e) => {
+    const id = e.currentTarget.dataset.id;
+    if (id === optionsForDropDown.FEAT) {
+      setIsHovering((oldState) => {
+        let newState = {
+          ...oldState,
+          features: false,
+        };
+        return newState;
+      });
+    }
+    if (id === optionsForDropDown.COMPANY) {
+      setIsHovering((oldState) => {
+        let newState = {
+          ...oldState,
+          company: false,
+        };
+        return newState;
+      });
+    }
+  };
 
   const expandOptions = (e) => {
     const id = e.currentTarget.dataset.id;
@@ -68,24 +116,39 @@ const Navbar = () => {
         <img src={Logo} alt="/" className="hover:cursor-pointer md:w-[110px]" />
         {/* DESKTOP MENU LINKS */}
         <ul className="hidden md:flex items-center justify-between px-1 md:gap-x-4 lg:gap-x-8 md:ml-3 lg:ml-14">
-          <li className="group relative flex items-center hover:cursor-pointer h-full">
+          <li
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            data-id={optionsForDropDown.FEAT}
+            className="group relative flex items-center hover:cursor-pointer h-full"
+          >
             <span className="text-medium-gray hover:text-almost-black">
               Features
             </span>{" "}
             <span className="">
-              <MdKeyboardArrowDown />
+              {isHovering.features ? (
+                <MdKeyboardArrowUp />
+              ) : (
+                <MdKeyboardArrowDown />
+              )}
             </span>
-            {/* <span className="">
-              <MdKeyboardArrowUp />
-            </span> */}
             <Features />
           </li>
-          <li className="group relative flex items-center hover:cursor-pointer h-full">
+          <li
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            data-id={optionsForDropDown.COMPANY}
+            className="group relative flex items-center hover:cursor-pointer h-full"
+          >
             <span className="text-medium-gray hover:text-almost-black">
               Company
             </span>{" "}
             <span className="">
-              <MdKeyboardArrowDown />
+              {isHovering.company ? (
+                <MdKeyboardArrowUp />
+              ) : (
+                <MdKeyboardArrowDown />
+              )}
             </span>
             <Company />
           </li>
@@ -144,7 +207,7 @@ const Navbar = () => {
             {/* FEATURES */}
             <li className="flex flex-col text-medium-gray text-left ">
               <button
-                data-id="feat"
+                data-id={optionsForDropDown.FEAT}
                 className="flex items-center hover:text-almost-black"
                 onClick={expandOptions}
               >
@@ -182,7 +245,7 @@ const Navbar = () => {
             {/* COMPANY */}
             <li className="flex flex-col text-medium-gray text-left ">
               <button
-                data-id="comp"
+                data-id={optionsForDropDown.COMPANY}
                 className="flex items-center hover:text-almost-black"
                 onClick={expandOptions}
               >
