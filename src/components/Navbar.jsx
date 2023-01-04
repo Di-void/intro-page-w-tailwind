@@ -3,6 +3,8 @@ import Logo from "../assets/svgs/logo.svg";
 import { TbMenu2 } from "react-icons/tb";
 import { GrClose } from "react-icons/gr";
 import { featureIcons } from "../libs/featureIcons";
+import Features from "./nav-menu-opts/Features";
+import Company from "./nav-menu-opts/Company";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const optionsForDropDown = {
@@ -59,29 +61,62 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between p-5">
+      {/* DESKTOP MENU */}
+
       {/* LOGO AND LINKS SECTION */}
-      <div className="flex md:w-[80%] max-w-[700px] ">
-        <img src={Logo} alt="/" className="hover:cursor-pointer" />
+      <div className=" flex">
+        <img src={Logo} alt="/" className="hover:cursor-pointer md:w-[110px]" />
         {/* DESKTOP MENU LINKS */}
-        <ul className="hidden md:flex justify-between ml-20 w-[80%]">
-          <li className="flex items-center text-medium-gray text-left">
-            Features{" "}
-            <span className="ml-2">
+        <ul className="hidden md:flex items-center justify-between px-1 md:gap-x-4 lg:gap-x-8 md:ml-3 lg:ml-14">
+          <li className="group relative flex items-center hover:cursor-pointer h-full">
+            <span className="text-medium-gray hover:text-almost-black">
+              Features
+            </span>{" "}
+            <span className="">
               <MdKeyboardArrowDown />
             </span>
+            {/* <span className="">
+              <MdKeyboardArrowUp />
+            </span> */}
+            <Features />
           </li>
-          <li className="flex items-center text-medium-gray text-left">
-            Company{" "}
-            <span className="ml-2">
+          <li className="group relative flex items-center hover:cursor-pointer h-full">
+            <span className="text-medium-gray hover:text-almost-black">
+              Company
+            </span>{" "}
+            <span className="">
               <MdKeyboardArrowDown />
             </span>
+            <Company />
           </li>
-          <li className="text-medium-gray text-left">Careers</li>
-          <li className="text-medium-gray text-left">About</li>
+          <li className="text-medium-gray hover:text-almost-black hover:cursor-pointer">
+            Careers
+          </li>
+          <li className="text-medium-gray hover:text-almost-black hover:cursor-pointer">
+            About
+          </li>
         </ul>
-        {/* END DESKTOP MENU LINKS */}
+        {/* END LOGO AND LINKS SECTION */}
       </div>
-      {/* END LOGO AND LINKS SECTION */}
+
+      {/* DESKTOP BTNS */}
+      <div className="hidden  md:flex justify-between items-center gap-x-8">
+        <button className="text-medium-gray hover:text-almost-black hover:cursor-pointer">
+          Login
+        </button>
+        <button className="px-2 py-1 rounded-lg text-center hover:bg-almost-black hover:text-almost-white border-2 border-almost-black duration-75">
+          Register
+        </button>
+      </div>
+      {/* END DESKTOP BTNS */}
+
+      {/* HAMBURGER */}
+      <button className="text-3xl md:hidden" onClick={toggleMenu}>
+        <TbMenu2 />
+      </button>
+      {/* END HAMBURGER */}
+
+      {/* END DESKTOP MENU */}
 
       {/* MOBILE MENU */}
       {/* OVERLAY */}
@@ -104,7 +139,7 @@ const Navbar = () => {
             <GrClose />
           </button>
 
-          {/* mobile-links */}
+          {/* LINKS */}
           <ul className="flex flex-col gap-4 mt-14 justify-between">
             {/* FEATURES */}
             <li className="flex flex-col text-medium-gray text-left ">
@@ -122,7 +157,7 @@ const Navbar = () => {
                   )}
                 </span>
               </button>
-              {/* sub links */}
+              {/* FEATURES SUBLINKS */}
               <ul
                 className={`mt-3 ml-8 flex flex-col gap-2 ${
                   navStates.menuState.features ? "" : "hidden"
@@ -140,7 +175,9 @@ const Navbar = () => {
                   );
                 })}
               </ul>
+              {/* END FEATURES SUBLINKS */}
             </li>
+            {/* END FEATURES */}
 
             {/* COMPANY */}
             <li className="flex flex-col text-medium-gray text-left ">
@@ -158,7 +195,7 @@ const Navbar = () => {
                   )}
                 </span>
               </button>
-              {/* sub links */}
+              {/* COMPANY SUBLINKS */}
               <ul
                 className={`mt-3 ml-8 flex flex-col gap-2 ${
                   navStates.menuState.company ? "" : "hidden"
@@ -170,7 +207,9 @@ const Navbar = () => {
                 </li>
                 <li className="hover:outline-dotted cursor-pointer">Blog</li>
               </ul>
+              {/* END COMPNAY SUBLINKS */}
             </li>
+            {/* END COMPANY */}
 
             {/*  */}
             <li className="text-medium-gray hover:text-almost-black text-left hover:cursor-pointer">
@@ -183,7 +222,7 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* buttons */}
+          {/* BUTTONS */}
           <button className="block mx-auto text-medium-gray mt-7 hover:text-almost-black">
             Login
           </button>
@@ -191,15 +230,9 @@ const Navbar = () => {
             Register
           </button>
         </div>
+        {/* END LINKS */}
       </div>
       {/* END MOBILE MENU */}
-
-      {/* buttons */}
-
-      {/* hamburger */}
-      <button className="text-3xl md:hidden" onClick={toggleMenu}>
-        <TbMenu2 />
-      </button>
     </nav>
   );
 };

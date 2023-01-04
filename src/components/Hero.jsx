@@ -22,8 +22,8 @@ const Hero = () => {
       {/* END HERO IMAGE */}
 
       {/* HERO AND INFO */}
-      <article className="mt-5 lg:m-0 lg:w-full lg:relative">
-        <h2 className="text-3xl font-bold text-center max-w-[400px] mx-auto lg:text-6xl lg:text-left">
+      <article className="place-self-center mt-5 lg:m-0 lg:min-h-[60vh] lg:w-full lg:relative">
+        <h2 className="text-3xl font-bold text-center max-w-[400px] mx-auto md:text-4xl lg:text-6xl lg:text-left">
           Make remote work
         </h2>
         <p className="text-center text-medium-gray mt-3 max-w-2xl p-3 lg:p-0 lg:max-w-[400px] lg:text-left lg:mt-8 mx-auto">
