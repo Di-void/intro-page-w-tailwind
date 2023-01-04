@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [MY Solution](https://github.com/Multimarix/intro-page-w-tailwind)
-- Live Site URL: [LIve Site](https://your-live-site-url.com)
+- Live Site URL: [LIve Site](https://snap-w-tailwind.netlify.app/)
 
 ## My process
 
@@ -65,7 +65,7 @@ I plan to continue building more projects with tailwind css as I think It will h
 
 ### Useful resources
 
-- [The Official Tailwind Docs](https://tailwindcss.com/docs/installation) - I've got to say, these docs are absolutely fire. For real. It was immensely helpful in my learning process. Prop to the people behind this :)
+- [The Official Tailwind Docs](https://tailwindcss.com/docs/installation) - I've got to say, these docs are absolutely fire. For real. It was immensely helpful in my learning process. Props to the people behind this :)
 - [Thirus on YT(YouTube)](https://www.youtube.com/watch?v=kuY9MehvHh4) - This channel and this video in particular was really helpful in learning how to apply the Css Grid system in tailwind css. Great Channel.
 
 ## Author
