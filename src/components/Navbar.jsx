@@ -112,7 +112,7 @@ const Navbar = () => {
       {/* DESKTOP MENU */}
 
       {/* LOGO AND LINKS SECTION */}
-      <div className=" flex">
+      <div className="flex">
         <img src={Logo} alt="/" className="hover:cursor-pointer md:w-[110px]" />
         {/* DESKTOP MENU LINKS */}
         <ul className="hidden md:flex items-center justify-between px-1 md:gap-x-4 lg:gap-x-8 md:ml-3 lg:ml-14">
@@ -125,7 +125,7 @@ const Navbar = () => {
             <span className="text-medium-gray hover:text-almost-black">
               Features
             </span>{" "}
-            <span className="">
+            <span>
               {isHovering.features ? (
                 <MdKeyboardArrowUp />
               ) : (
@@ -143,7 +143,7 @@ const Navbar = () => {
             <span className="text-medium-gray hover:text-almost-black">
               Company
             </span>{" "}
-            <span className="">
+            <span>
               {isHovering.company ? (
                 <MdKeyboardArrowUp />
               ) : (
