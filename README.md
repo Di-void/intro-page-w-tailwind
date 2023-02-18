@@ -70,7 +70,7 @@ I plan to continue building more projects with tailwind css as I think It will h
 
 ## Author
 
-- Github - [Multimarix](https://github.com/Multimarix)
+- Github - [Di-void](https://github.com/Di-void)
 - Frontend Mentor - [@Multimarix](https://www.frontendmentor.io/profile/Multimarix)
 - LinkedIN - [Don Akhirebhulu](https://www.linkedin.com/in/don-akhirebhulu-675082242/)
 
